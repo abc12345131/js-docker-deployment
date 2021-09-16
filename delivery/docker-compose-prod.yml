@@ -10,8 +10,6 @@ services:
         delay: 15s
     build: .
     image: abc12345131/node-app:vue
-    ports:
-      - "4000:4000"
     command: npm run start
     environment:
       - NODE_ENV=production
