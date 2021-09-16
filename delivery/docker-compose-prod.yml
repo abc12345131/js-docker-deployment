@@ -9,7 +9,7 @@ services:
         parallelism: 2
         delay: 15s
     build: .
-    image: abc12345131/node-app:react
+    image: abc12345131/node-app:vue
     command: npm run start
     environment:
       - NODE_ENV=production

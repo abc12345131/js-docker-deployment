@@ -10,6 +10,8 @@ services:
         delay: 15s
     build: .
     image: abc12345131/node-app:react
+    volumes: 
+      - upload-files:/home/nodejs/server/public/upload
     command: npm run start
     environment:
       - NODE_ENV=production
@@ -45,6 +47,7 @@ services:
 
 volumes: 
   mongo-db:
+  upload-files:
 
     
 
