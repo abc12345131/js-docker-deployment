@@ -16,8 +16,7 @@ const {
   MONGO_PORT,
   SESSION_SECRET,
   REDIS_IP,
-  REDIS_PORT,
-  SESSION_SECRET
+  REDIS_PORT
 } = require('./config/config')
 const errorHandler = require('./middlewares/errorHandlerMiddleware')
 
