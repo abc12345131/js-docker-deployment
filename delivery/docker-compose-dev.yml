@@ -1,0 +1,47 @@
+version: "3"
+services:
+  server:
+    build: 
+      context: .
+      args:
+        NODE_ENV: development 
+    command: npm run dev
+    environment:
+      - NODE_ENV=development
+      - MONGO_USER=admin
+      - MONGO_PASSWORD=admin
+      - SESSION_SECRET=secret
+    depends_on:
+      - mongodb      
+    volumes:
+      - ./server:/home/nodejs/server
+      - ./server/node_modules
+
+  nginx:
+    image: nginx
+    links:
+      - server
+    ports:
+      - "80:80"
+    volumes:
+      - ./client:/home/client
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+
+  mongodb:
+    image: mongo
+    environment: 
+    - MONGO_INITDB_ROOT_USERNAME=admin
+    - MONGO_INITDB_ROOT_PASSWORD=admin
+    volumes:
+      - ./mongoDB_file:/home/mongoDB_file
+      - mongo-db:/data/db
+    command: mongod
+    
+  redis:
+    image: redis
+
+volumes: 
+  mongo-db:
+    
+    
+

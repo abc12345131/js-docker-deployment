@@ -1,0 +1,8 @@
+Dockerfil*
+docker-compose*
+node_modules
+LICENSE
+README.md
+mongoDB_file
+.git
+.gitignore
