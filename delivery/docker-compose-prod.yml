@@ -32,8 +32,9 @@ services:
       - "443:443"
     volumes:
       - ./client:/home/client
-      - ./config/nginx:/etc/nginx:ro
-
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/nginx/35.196.216.143.crt:/etc/nginx/35.196.216.143.crt:ro # ssl certificate
+      - ./config/nginx/35.196.216.143.key:/etc/nginx/35.196.216.143.key:ro # ssl key
   mongodb:
     image: mongo:4.2
     environment: 
