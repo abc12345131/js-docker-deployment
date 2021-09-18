@@ -33,7 +33,7 @@ services:
     volumes:
       - ./client:/home/client
       - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./config/nginx/ca.crt:/etc/nginx/ca.crt:ro # ssl certificate
+      - ./config/nginx/ca.pem:/etc/nginx/ca.pem:ro # ssl certificate
       - ./config/nginx/ca.key:/etc/nginx/ca.key:ro # ssl key
   mongodb:
     image: mongo:4.2
