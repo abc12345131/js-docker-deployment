@@ -29,6 +29,7 @@ services:
       - server
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./client:/home/client
       - ./config/nginx:/etc/nginx:ro
