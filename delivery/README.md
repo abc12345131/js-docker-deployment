@@ -54,7 +54,8 @@ this option will start three containers:
     - Node.js app container
     - NGINX proxy container
 
-# use docker swarm for production   
+# use docker swarm for production
+    update ssl certificate .pem .key files in ./config/nginx
     docker stack deploy -c docker-compose-prod.yml myapp
 
 this option will start six containers:
