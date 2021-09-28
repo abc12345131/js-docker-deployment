@@ -12,7 +12,7 @@ exports.createUser = (req, res, next) => {
     UserModel.findOne({username})
         .then(user => {
             if (user) {
-                res.send({status: 1, msg: 'Someone already uses the username, please try another one!'})
+                res.send({status: 1, msg: 'This username is already taken, please try another one!'})
                 return new Promise(() => {})
             } else {
                 return UserModel.create({...req.body, password: md5(password)})
@@ -55,6 +55,10 @@ exports.userLogin = (req, res, next) => {
                             //use session
                             //req.session.user = user
                             res.send({status: 0})
+                        })
+                        .catch(error => {
+                            console.error('Role not found exception', error)
+                            res.send({status: 1, msg: 'Role not found exception, please try again!'})
                         })
                 } else {
                     user._doc.role = {menus: []}

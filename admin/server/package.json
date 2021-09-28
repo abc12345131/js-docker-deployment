@@ -1,5 +1,5 @@
 {
-  "name": "express-server",
+  "name": "express-admin-server",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -17,7 +17,7 @@
     "express-validator": "^6.12.0",
     "http-errors": "^1.6.3",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.13",
+    "mongoose": "^6.0.8",
     "morgan": "^1.9.1",
     "multer": "^1.4.2",
     "redis": "^3.1.2"
