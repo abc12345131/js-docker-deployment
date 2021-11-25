@@ -9,7 +9,7 @@ services:
         parallelism: 2
         delay: 15s
     build: .
-    image: abc12345131/node-app:react
+    image: abc12345131/node-app:admin
     volumes: 
       - upload-files:/home/nodejs/server/public/upload
     command: npm run start
