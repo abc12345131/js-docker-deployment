@@ -9,9 +9,7 @@ services:
         parallelism: 2
         delay: 15s
     build: .
-    image: abc12345131/node-app:react
-    volumes: 
-      - upload-files:/home/nodejs/server/public/upload
+    image: abc12345131/node-app:hire
     command: npm run start
     environment:
       - NODE_ENV=production
@@ -41,13 +39,9 @@ services:
       - ./mongoDB_file:/home/mongoDB_file
       - mongo-db:/data/db
     command: mongod
-    
-  # redis:
-  #   image: redis:6.0.14
 
 volumes: 
   mongo-db:
-  upload-files:
 
     
 
