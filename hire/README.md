@@ -12,12 +12,14 @@ This configuration is a single page application mainly with the following techno
 Back-end
 - [Node.js](https://nodejs.org/en/) (Long-Term-Support Version) as the run-time environment to run JavaScript.
 - [Express.js](https://expressjs.com/) as the server framework 
+- [Socket.IO](https://socket.io/) as the bidirectional communication platform
 - [MongoDB](https://www.mongodb.com/) as the database layer
 - [Mongoose](https://mongoosejs.com/) as the "ODM" / model layer
 Front-end
 - [React.js](https://reactjs.org/) as the client framework
 - [Antd Mobile](https://mobile.ant.design/) as the UI library
 - [Axios](https://axios-http.com/) as the promise based HTTP client
+- [Socket.IO](https://socket.io/) as the bidirectional communication platform
 - [Webpack](https://webpack.js.org/) as the module bundler
 
 Deploy
