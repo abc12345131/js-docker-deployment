@@ -1,12 +1,12 @@
 const MessageModel = require('../models/MessageModel')
-//const { CLIENT_ADDRESS } = require('../config/config')
+const { CLIENT_ADDRESS } = require('../config/config')
 
 module.exports = function(server) {
     const io = require('socket.io')(server, {
-        // cors: {
-        //     origin: CLIENT_ADDRESS,
-        //     methods: ["GET", "POST"]
-        // }
+        cors: {
+            origin: CLIENT_ADDRESS,
+            methods: ["GET", "POST"]
+        }
     })
 
     io.on('connection', (socket) => {
