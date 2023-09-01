@@ -41,11 +41,11 @@ You will need to first download and install [Docker] and [Docker-Compose]
     [ip add <!-- get eth0 ip -->]
     docker swarm init --advertise-addr ${yourip}
 
-# setup environment    
-    vi .profile
-add follow code to the bottom
-    set -o allexport; source .env; set +o allexport;
+# setup environment
+add all required environment variables to .env file, add follow code to the bottom of .profile
 
+    set -o allexport; source .env; set +o allexport;
+    
 # start running docker-compose for devlopment
     docker-compose -f docker-compose-dev.yml up -d --build
 this option will start three containers:
@@ -77,4 +77,7 @@ this option will start six containers:
 
 ## mongoDB-file
 
-- sample data and import script for mongoDB 
+- sample data and import script for mongoDB
+
+# Troubleshooting
+- any database issue need to be fixed, remember to delete docker volume (lesson of blood and tears)
